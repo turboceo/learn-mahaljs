@@ -1,0 +1,27 @@
+---
+name: mahal_intro.mahal
+description: Shows Welcome and important links
+dateCreated: April 05, 2022
+---
+
+<html>
+
+<div>
+  <div>{{count}}</div>
+  <button on:click="incrementCount">Increment count</button>
+</div>
+
+</html>
+
+<script>
+import { Component, reactive } from "mahal";
+export default class extends Component{
+
+  @reactive
+  count = 0;
+
+  incrementCount(){
+    this.count++;
+  }
+}
+</script>
